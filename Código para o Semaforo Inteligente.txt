@@ -1,0 +1,32 @@
+// Nomeando as portas digitais do arduino
+
+int vermelho = 10;
+int amarelo = 9;
+int verde = 8;
+
+
+void setup()
+{ 
+// indicando para o arduino quais portas vamos usar
+  pinMode(vermelho, OUTPUT);
+  pinMode(amarelo, OUTPUT);
+  pinMode(verde, OUTPUT);
+
+}
+
+void loop()
+{
+  
+  digitalWrite(verde, HIGH); //Verde aceso
+  digitalWrite(amarelo, LOW); //Amarelo apagado
+  digitalWrite(vermelho, LOW); //Vermelho apagado
+  delay(4000); // Espera 4 segundos para acender o próximo Led
+  digitalWrite(verde, LOW); //Verde apagado
+  digitalWrite(amarelo, HIGH); // Amarelo aceso
+  digitalWrite(vermelho, LOW); // Vermelho apagado
+  delay(2000); // Espera 2 segundos para acender o próximo Led
+  digitalWrite(verde, LOW); //Verde apagado
+  digitalWrite(amarelo, LOW); //Amarelo apagado
+  digitalWrite(vermelho, HIGH); //Vermelho aceso
+  delay(4000); // Espera mais 4 segundos para voltar ao inicio do loop
+}
